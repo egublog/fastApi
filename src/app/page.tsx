@@ -21,7 +21,7 @@ export default function Home() {
   }, [input]);
 
   return (
-    <div>
+    <main className="h-screen w-screen grainy">
       <input
         value={input}
         onChange={(e) => {
@@ -30,6 +30,6 @@ export default function Home() {
         className="text-zinc-900"
         type="text"
       />
-    </div>
+    </main>
   );
 }

@@ -10,6 +10,9 @@ import {
 } from "@/components/ui/command";
 import { useEffect, useState } from "react";
 
+/**
+ * ホームページ
+ */
 export default function Home() {
   const [input, setInput] = useState<string>("");
   const [searchResults, setSearchResults] = useState<{

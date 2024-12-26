@@ -24,8 +24,12 @@ export default function Home() {
     const fetchData = async () => {
       if (!input) return setSearchResults(undefined);
 
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const res = await fetch(`/api/search?q=${input}`);
+      const data = (await res.json()) as {
+        results: string[];
+        duration: number;
+      };
+      setSearchResults(data);
     };
     fetchData();
   }, [input]);

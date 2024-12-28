@@ -6,6 +6,9 @@ import { handle } from "hono/vercel";
 
 export const runtime = "edge";
 
+/**
+ * Honoのインスタンスを作成
+ */
 const app = new Hono().basePath("/api");
 
 type EnvConfig = {
